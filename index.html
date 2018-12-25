@@ -13,9 +13,9 @@
 		/*https://codepen.io/Mamboleoo/pen/obWGYr */
 		
 		#HOMEPAGE{
-			background: black;
-			width: 50vw;
-			height: 70vh; 			          
+			background: black; 
+			width: 100%;
+			height: auto;
 		}
 		input{
 			visibility: hidden;
@@ -91,7 +91,7 @@
 
 	</style>
 	<style> /*WORK*/
-	/*https://codepen.io/geoffgraham/pen/jrWwWM*/
+/*https://codepen.io/geoffgraham/pen/jrWwWM*/
 /* DEMO-SPECIFIC STYLES */
 .typewriter h1 {
   color: #fff;
@@ -105,138 +105,132 @@
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
 }
-
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
-
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
-	
-	
 	</style>	
 	<style> /*CONTACT*/
-	@import url(https://fonts.googleapis.com/css?family=Lobster);
-@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
-@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
-@import url(https://fonts.googleapis.com/css?family=Bangers);
+		@import url(https://fonts.googleapis.com/css?family=Lobster);
+		@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+		@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+		@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+		/* Typography fx */
+
+		.line-11 {
+			color: rgb(0, 175, 200);
+			font-size: 2rem;
+			font-family: 'Lobster', cursive;
+			text-shadow: -4px 4px 0 rgb(25, 25, 25), -6px 6px 0 rgb(255, 125, 0);
+		}
+
+		.line-2 {
+			color: rgb(255, 255, 255);
+			font-size: 2rem;
+			font-family: 'Indie Flower', cursive;
+			text-shadow: 0 4px 0 rgb(25, 25, 25), 0 6px 0 rgba(255, 255, 255, .25);
+		}
+
+		.line-3 {
+			color: #FFF;
+			font-size: 2rem;
+			font-family: 'Lora', serif;
+			font-family: 'Gloria Hallelujah', cursive;
+			line-height: 8rem;
+			text-shadow: 0 4px 0 rgb(25, 25, 25), 0 6px 0 rgba(255, 255, 255, .5), 0 10px 0 rgb(25, 25, 25), 0 12px 0 rgba(255, 255, 255, .25);
+		}
+
+		.line-3:after {
+			content: ' :)';
+		}
+
+		.line-4 {
+			color: rgb(245, 250, 0);
+			font-size: 2rem;
+			font-family: 'Bangers', cursive;
+			text-transform: uppercase;
+			letter-spacing: .25rem;
+			text-shadow: 0 1px 0 rgb(45, 50, 0), 0 2px 0 rgb(45, 50, 0), 0 3px 0 rgb(45, 50, 0), 0 4px 0 rgb(45, 50, 0), 0 6px 4px rgb(0, 0, 0), 0 10px 12px rgb(0, 0, 0);
+		}
 
 
+		/* Animations */
 
-/* Typography fx */
-.line-11{  
-  color: rgb(0,175,200);
-  font-size: 2rem;
-  font-family: 'Lobster', cursive;  
-  text-shadow: -4px 4px 0 rgb(25,25,25),
-               -6px 6px 0 rgb(255,125,0);
-}
-.line-2{
-  color: rgb(255,255,255);
-  font-size: 2rem;
-  font-family: 'Indie Flower', cursive;  
-  text-shadow: 0 4px 0 rgb(25,25,25),
-               0 6px 0 rgba(255,255,255,.25);
-}
-.line-3{
-  color: #FFF;
-  font-size: 2rem;  
-  font-family: 'Lora', serif;
-  font-family: 'Gloria Hallelujah', cursive;
-  line-height: 8rem;   
-  text-shadow: 0 4px 0 rgb(25,25,25),
-               0 6px 0 rgba(255,255,255,.5),
-               0 10px 0 rgb(25,25,25),
-               0 12px 0 rgba(255,255,255,.25);  
+		.anim-fadeZoom {
+			animation: fadeZoom 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 100ms 1 normal both;
+		}
 
-}
-.line-3:after{
-  content: ' :)';      
-}
-.line-4{
-  color: rgb(245,250,0);
-  font-size: 2rem;
-  font-family: 'Bangers', cursive;
-  text-transform: uppercase;
-  letter-spacing: .25rem;
-  text-shadow: 0 1px 0 rgb(45,50,0),
-               0 2px 0 rgb(45,50,0),
-               0 3px 0 rgb(45,50,0),
-               0 4px 0 rgb(45,50,0),
-               0 6px 4px rgb(0,0,0),
-               0 10px 12px rgb(0,0,0);
-}
+		@keyframes fadeZoom {
+			0% {
+				opacity: 0;
+				transform: scale(.5);
+			}
+			50% {
+				transform: scale(1.5);
+			}
+			75% {
+				transform: scale(.5);
+			}
+			100% {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
 
-/* Animations */
-.anim-fadeZoom{
-  animation: fadeZoom 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 100ms 1 normal both;  
-}
-@keyframes fadeZoom{
- 0%{
-    opacity: 0;
-    transform: scale(.5);
-  }
-  50%{   
-    transform: scale(1.5);
-  }
-  75%{
-    transform: scale(.5);
-  }
-  100%{
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+		.anim-down2up {
+			animation: down2up 2s cubic-bezier(0.660, 0.005, 0.400, 1.590) 1.5s 1 normal both;
+		}
 
-.anim-down2up{
-  animation: down2up 2s cubic-bezier(0.660, 0.005, 0.400, 1.590) 1.5s 1 normal both;  
-}
-@keyframes down2up{
-  0%{
-    opacity: 0;
-    transform: translateY(100%);    
-  }
-  100%{
-    opacity: 1;
-    transform: translateY(0);    
-  }
-}
+		@keyframes down2up {
+			0% {
+				opacity: 0;
+				transform: translateY(100%);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
 
-.anim-smoke{
-  animation: smoke 1.5s cubic-bezier(0.565, -0.505, 0.550, 1.495) 2.5s 1 normal both;  
-}
-@keyframes smoke{
-  0%{
-    opacity: 0;
-    transform: scale(2) skew(45deg);
-    -webkit-filter: blur(50px);
-  }
-  100%{
-    opacity: 1;    
-    transform: scale(1) skew(0);
-    -webkit-filter: blur(0);
-  }
-}
+		.anim-smoke {
+			animation: smoke 1.5s cubic-bezier(0.565, -0.505, 0.550, 1.495) 2.5s 1 normal both;
+		}
 
-.anim-break{
-  animation: break 1s cubic-bezier(0.565, -0.505, 0.550, 1.495) 3.5s 1 normal both;  
-}
-@keyframes break{
-  0%{    
-    transform: translateX(-100vw) skewX(45deg);
-  }
-  50%{    
-    transform: translateX(15vw) skewX(-45deg);
-  }
-  100%{    
-    transform: translateX(0vw) skewX(0deg);
-  }
-}
+		@keyframes smoke {
+			0% {
+				opacity: 0;
+				transform: scale(2) skew(45deg);
+				-webkit-filter: blur(50px);
+			}
+			100% {
+				opacity: 1;
+				transform: scale(1) skew(0);
+				-webkit-filter: blur(0);
+			}
+		}
+
+		.anim-break {
+			animation: break 1s cubic-bezier(0.565, -0.505, 0.550, 1.495) 3.5s 1 normal both;
+		}
+
+		@keyframes break {
+			0% {
+				transform: translateX(-100vw) skewX(45deg);
+			}
+			50% {
+				transform: translateX(15vw) skewX(-45deg);
+			}
+			100% {
+				transform: translateX(0vw) skewX(0deg);
+			}
+		}
 	</style>
 	
 	
@@ -247,7 +241,7 @@
 		<div class="row">
 			<div class="col-lg" style="background-color:black;">
 				<div class="flux">HOME</div>
-				<canvas id="HOMEPAGE"></canvas>
+				<canvas id="HOMEPAGE" width="300" height="300"></canvas>
 				<input id="copy" type="text" value="AKAWZ" >
 			</div>
 			<div class="col-lg" style="background-color:black;">
@@ -262,23 +256,22 @@
 					<div class="flux"></div>
 					<div class="neon"></div>
 				</div>
-			</div>
-			<div class="col-lg" style="background-color:black;">
 				<div class="flux">WORK</div>
 				<div class="typewriter">
-					<h1>RAJAMANGGALA UNIVERSITY OF TECHNOLOGY<br>
-						MAJOR INFORMATION TECHNOLOGY
-					</h1>
+					<h1>RAJAMANGGALA UNIVERSITY OF TECHNOLOGY</h1>
 				</div>
-				<div class="col-lg" style="background-color:black;">
-					<div class="flux">CONTACT</div>
-					<p>
-						<span class="line-11 anim-fadeZoom">32 Soi bangwake 31</span>
-						<span class="line-2 anim-down2up">District Bangwake Pasechareon</span>
-						<span class="line-3 anim-smoke">Krungthep</span>  
-						<span class="line-4 anim-break">10160</span>
-					</p>
+				<br>
+				<div class="typewriter">
+					<h1>MAJOR INFORMATION TECHNOLOGY</h1>
 				</div>
+				
+				<div class="flux">CONTACT</div>
+				<p>
+					<span class="line-11 anim-fadeZoom">32 Soi bangwake 31</span>
+					<span class="line-2 anim-down2up">District Bangwake Pasechareon</span>
+					<span class="line-3 anim-smoke">Krungthep</span>  
+					<span class="line-4 anim-break">10160</span>
+				</p>
 			</div>
 		</div>
 	</div>
